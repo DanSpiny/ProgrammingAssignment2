@@ -38,7 +38,6 @@ makeCacheMatrix <- function(stored_mat = matrix()) {
 }
 
 
-
 cacheSolve <- function(mat_obj, ...) {
     # Computes the inverse of the special "matrix"
     # returned by makeCacheMatrix abovea
@@ -50,6 +49,7 @@ cacheSolve <- function(mat_obj, ...) {
     #   mat_obj - special "matrix" object returned by makeCacheMatrix
     # Returns:
     #   inverse matrix of the one stored in the special "matrix" object mat_obj
+    
     inv <- mat_obj$get_inv()
     if(!is.null(inv)) {
         message("getting cached data")
